@@ -1,0 +1,94 @@
+.burger-menu-container {
+  display: none;
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+  border-radius: 100%;
+  background-image: -moz-linear-gradient(90deg, #eb402c 0%, #d90647 100%);
+  background-image: -webkit-linear-gradient(90deg, #eb402c 0%, #d90647 100%);
+  background-image: -ms-linear-gradient(90deg, #eb402c 0%, #d90647 100%);
+  -webkit-transition: all 0.1s linear 0s;
+  -moz-transition: all 0.1s linear 0s;
+  -o-transition: all 0.1s linear 0s;
+  transition: all 0.1s linear 0s;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+.burger-menu-container:hover {
+  box-shadow: inset 0 0 0 4px #fff;
+}
+.burger-menu-container:hover .burger-menu {
+  background-color: rgba(255, 255, 255, 0);
+}
+.burger-menu-container:hover .burger-menu .burger,
+.burger-menu-container:hover .burger-menu::after,
+.burger-menu-container:hover .burger-menu::before {
+  box-shadow: inset 0 0 50px 0 #fff;
+}
+.burger-menu {
+  -webkit-transition: all 0.1s linear 0s;
+  -moz-transition: all 0.1s linear 0s;
+  -o-transition: all 0.1s linear 0s;
+  transition: all 0.1s linear 0s;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #fff;
+}
+.burger-menu::before,
+.burger-menu::after {
+  -webkit-transition: all 0.1s linear 0s;
+  -moz-transition: all 0.1s linear 0s;
+  -o-transition: all 0.1s linear 0s;
+  transition: all 0.1s linear 0s;
+  content: '';
+  display: block;
+  position: absolute;
+  margin-left: 13px;
+  margin-top: calc(13px);
+  width: 25px;
+  height: 4px;
+  background-image: -moz-linear-gradient(90deg, #eb402c 0%, #d90647 100%);
+  background-image: -webkit-linear-gradient(90deg, #eb402c 0%, #d90647 100%);
+  background-image: -ms-linear-gradient(90deg, #eb402c 0%, #d90647 100%);
+}
+.burger-menu::after {
+  margin-top: calc(33px);
+}
+.burger-menu .burger {
+  -webkit-transition: all 0.1s linear 0s;
+  -moz-transition: all 0.1s linear 0s;
+  -o-transition: all 0.1s linear 0s;
+  transition: all 0.1s linear 0s;
+  display: block;
+  position: absolute;
+  margin-left: 13px;
+  margin-top: calc(23px);
+  width: 25px;
+  height: 4px;
+  background-image: -moz-linear-gradient(90deg, #eb402c 0%, #d90647 100%);
+  background-image: -webkit-linear-gradient(90deg, #eb402c 0%, #d90647 100%);
+  background-image: -ms-linear-gradient(90deg, #eb402c 0%, #d90647 100%);
+}
+.menu_active::before {
+  transform: rotate(-45deg) translateX(-9px) translateY(6px);
+}
+.menu_active .burger {
+  opacity: 0;
+}
+.menu_active::after {
+  transform: translateX(-2px) translateY(-10px) rotate(45deg);
+}
+@media (max-width: 591px) {
+  .burger-menu-container {
+    display: block;
+  }
+  .header-nav-list {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+}

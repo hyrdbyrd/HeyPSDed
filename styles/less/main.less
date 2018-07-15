@@ -1,0 +1,95 @@
+@import 'index.less';
+
+.main, html, body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: "Lato";
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar { 
+    background: none;
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: @color-dark-pink;
+}
+// ::-webkit-scrollbar-button {}
+// ::-webkit-scrollbar-track-piece {}
+// ::-webkit-resizer {}
+// ::-webkit-scrollbar-corner {}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.nav-container {
+    width: 88%;
+    margin: 0 auto;
+}
+
+// .product__name {}
+
+.theme_gray_text {
+    font-size: 14px;
+    margin-top: 20px;
+    color: @color-text-gray;
+    line-height: 1.8;
+}
+
+.theme_title {
+    color: @color-text-black;
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 30px;
+    &::after {
+        word-spacing: 0;
+        content: '.';
+        display: inline-block;
+        color: @color-dark-pink;
+    }
+}
+
+.theme_white_btn {
+    border: 1.4px solid @color-dark-pink;
+    color: @color-dark-pink;
+    font-weight: bold;
+    border-radius: 80px;
+    padding: 10px;
+    width: 170px;
+    .animate(0.13s);
+    &:hover {
+        background: rgba(255, 255, 255, 0);
+        border-color: @color-white;
+        color: @color-white;
+    }
+    &:focus, &:active {
+        outline: none;
+    }
+}
+
+.theme_orange_btn {
+    color: @color-white;
+    .linear-gradient();
+    border: none;
+    padding: 10px 40px;
+    font-size: 16px;
+    border-radius: 80px;
+    .animate();
+    &:hover {
+        box-shadow: inset 0 0 0 100px @color-dark-orange;
+    }
+    &:focus, &:active {
+        outline: none;
+    }
+}
+
+@media (max-width: 489px) {
+    .container {
+        width: 90%;
+    }
+}

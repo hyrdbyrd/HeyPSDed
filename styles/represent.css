@@ -1,0 +1,30 @@
+.represent {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-top: 100px;
+}
+.represent-left {
+  width: 60%;
+}
+.represent-left__title {
+  font-weight: bold;
+  font-size: 54px;
+  width: 100%;
+}
+.represent-left__btn {
+  margin-top: 50px;
+}
+.represent-left__text {
+  font-weight: 200;
+}
+.represent-right {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.represent-img {
+  margin-top: -25px;
+  width: 250px;
+  position: absolute;
+}

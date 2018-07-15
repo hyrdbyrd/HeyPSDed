@@ -1,0 +1,56 @@
+@import 'index.less';
+
+.sub-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-form {
+    margin: 20px 0;
+    width: 60%;
+}
+
+.email-inpt {
+    width: 92%;
+    background: @color-rewhite;
+    border: none;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 80px;
+    color: @color-text-gray;
+    font-weight: 100;
+    &:focus, &:active {
+        outline: none;
+    }
+}
+
+.sbmt-lbl {
+    margin-left: -16px;
+    position: absolute;
+}
+
+@media (max-width: 1449px) {
+    .email-inpt {
+        width: 60%;
+    }
+}
+
+@media (max-width: 691px) {
+    .sub-form {
+        width: 100%;
+    }
+    .email-inpt {
+        width: 40%;
+    }
+}
+
+@media (max-width: 569px) {
+    .email-inpt {
+        width: 70%;
+        margin: 10px 0;
+    }
+    .sbmt-lbl {
+        margin: 0 auto;
+        position: relative;
+    }
+}

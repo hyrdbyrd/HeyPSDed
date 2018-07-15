@@ -1,0 +1,79 @@
+@import 'index.less';
+
+.app-represent {
+    margin: 120px 0;
+    padding: 15px 0 0;
+    .linear-gradient();
+}
+
+.represent-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.app-functions {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    &:last-child {
+        text-align: left;
+        .app-function {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.app-function {
+    color: @color-white;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.function-desc__text {
+    margin: 0 0 0 0;
+    height: 80px;
+    overflow-y: hidden;
+    color: @color-white;
+    font-weight: 100;
+}
+
+.function__icon {
+    @size: 48px;
+    width: @size;
+    height: @size;
+    margin: 0 20px;
+}
+
+.app-phone {
+    width: 210px;
+    height: 100%;
+}
+
+@media (max-width: 949px) {
+    .app-represent {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 679px) {
+    .app-phone {
+        display: none;
+    }
+    .app-functions:last-child {
+        text-align: right;
+        .app-function {
+            flex-direction: row;
+        }
+    }
+    .represent-block {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

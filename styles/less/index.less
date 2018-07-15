@@ -1,0 +1,26 @@
+@color-dark-pink: rgb(217,6,71);
+@color-dark-orange: rgb(235,64,44);
+@color-white: #fff;
+@color-text-black: rgb(54, 54, 54);
+@color-reorange: #e73233;
+@color-text-gray: rgb(128, 128, 128);
+@color-light-gray: rgb(224, 224, 224);
+@color-shadow: rgba(54, 54, 54, .20);
+@color-rewhite: rgb(248, 248, 248);
+
+.linear-gradient (@degs: 90deg, @from: @color-dark-orange 0%, @to: @color-dark-pink 100%) {
+    background-image: -moz-linear-gradient(@degs, @from, @to);
+    background-image: -webkit-linear-gradient(@degs, @from, @to);
+    background-image: -ms-linear-gradient(@degs, @from, @to);
+}
+
+.animate (
+    @s: 0.3s, 
+    @timing-func: linear,
+    @duration: 0s
+) {
+    -webkit-transition: all @s @timing-func @duration;
+    -moz-transition: all @s @timing-func @duration;
+    -o-transition: all @s @timing-func @duration;
+    transition: all @s @timing-func @duration;
+}
